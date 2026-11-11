@@ -1,0 +1,38 @@
+name: Update public system status
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/10 * * * *'
+  push:
+    branches: [main]
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: public-system-status
+  cancel-in-progress: false
+jobs:
+  probe:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 24
+      - run: node --test scripts/probe.test.mjs
+      - run: node scripts/probe.mjs
+      - name: Save the public measurement
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/status.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update public web reachability'
+            git push
+          fi
+      - name: Request the Pages build explicitly
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds"
