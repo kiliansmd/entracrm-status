@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Öffentliche Web-Erreichbarkeit der entraCRM-Anwendungen. Unabhängig von der CRM-Anwendung bereitgestellt.">
+  <title>Systemstatus · entraCRM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header><a class="brand" href="https://app.entracrm.de">entra<span>crm</span></a><span class="eyebrow">SYSTEMSTATUS</span></header>
+    <section class="intro"><p class="eyebrow">ERREICHBARKEIT IM ÜBERBLICK</p><h1>Ein klarer Blick<br>auf deine Verbindung.</h1><p>Der öffentliche Web-Zugriff auf entraCRM – unabhängig von der Anwendung geprüft.</p></section>
+    <section class="summary" aria-live="polite" aria-atomic="true"><span class="indicator unknown" id="summary-indicator"></span><div><h2 id="summary-label">Status wird geladen</h2><p id="updated">Prüfergebnis wird abgerufen …</p></div><button id="refresh" type="button">Aktualisieren <span aria-hidden="true">↻</span></button></section>
+    <section class="services" aria-label="Anwendungen">
+      <article><div class="service-top"><span class="monogram">M</span><span id="mdb-badge" class="badge unknown">Wird geprüft</span></div><h2>entraCRM · MDB</h2><p>Web-Erreichbarkeit</p><a href="https://app.entracrm.de/mdb/dashboard" target="_blank" rel="noopener noreferrer">Anwendung öffnen <span aria-hidden="true">↗</span></a></article>
+      <article><div class="service-top"><span class="monogram">K</span><span id="klimafaktur-badge" class="badge unknown">Wird geprüft</span></div><h2>entraCRM · Klimafaktur</h2><p>Web-Erreichbarkeit</p><a href="https://admin.klimafaktur.de/klimafaktur/dashboard" target="_blank" rel="noopener noreferrer">Anwendung öffnen <span aria-hidden="true">↗</span></a></article>
+    </section>
+    <aside><h2>Was dieser Status zeigt</h2><p>Geprüft wird der öffentlich erreichbare Webdienst. Einzelne Funktionen, Anmeldungen oder Datenverbindungen können davon abweichend eingeschränkt sein. Die vollständige Betriebsprüfung ist dem verantwortlichen Team vorbehalten.</p><p>Neue Messwerte erscheinen ungefähr alle zehn Minuten. Bei verzögerten Prüfungen wird der Stand ausdrücklich als veraltet markiert.</p></aside>
+    <footer><span>Bereitgestellt über GitHub Pages</span><nav aria-label="Weitere Informationen"><a href="https://app.entracrm.de/mdb/support">Support</a><a href="https://app.entracrm.de/mdb/impressum">Impressum</a><a href="https://app.entracrm.de/mdb/datenschutz">Datenschutz</a><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">Datenschutz beim Hoster</a></nav></footer>
+  </main>
+  <script src="status.js" defer></script>
+</body>
+</html>
