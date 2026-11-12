@@ -1,17 +1,17 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-12T15:32:14.947Z",
+  "generatedAt": "2026-11-12T15:41:44.923Z",
   "scope": "public-web-reachability",
   "services": [
     {
       "id": "mdb",
       "state": "reachable",
-      "checkedAt": "2026-11-12T15:32:14.686Z"
+      "checkedAt": "2026-11-12T15:41:44.923Z"
     },
     {
       "id": "klimafaktur",
       "state": "reachable",
-      "checkedAt": "2026-11-12T15:32:14.947Z"
+      "checkedAt": "2026-11-12T15:41:44.920Z"
     }
   ]
 }
